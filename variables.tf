@@ -7,7 +7,7 @@ variable "public_ip_address" {
 variable "chart_version" {
   type        = string
   description = "ingress-inginx helm chart version"
-  default     = "4.7.1"
+  default     = "4.8.3"
 }
 
 variable "chart_values_overrides" {
