@@ -21,7 +21,7 @@ resource "azurerm_public_ip" "ingress_nginx_public_ip" {
 
 module "ingress-nginx" {
   depends_on        = [module.aks, azurerm_public_ip.ingress_nginx_public_ip]
-  source            = "github.com/aaheiev/kubernetes-ingress-nginx?ref=4.7.1"
+  source            = "github.com/aaheiev/kubernetes-ingress-nginx?ref=4.8.3"
   public_ip_address = azurerm_public_ip.ingress_nginx_public_ip.ip_address
   providers = {
     helm       = helm
